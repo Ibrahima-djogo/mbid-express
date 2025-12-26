@@ -27,7 +27,11 @@ const mockCategories = {
   },
 };
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage( {
+  params,
+  }: {
+    params: { slug: string };
+  }) {
   const category = mockCategories[params.slug as keyof typeof mockCategories] || mockCategories.electronique;
 
   return (
